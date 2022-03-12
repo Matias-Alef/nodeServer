@@ -1,26 +1,23 @@
 import express, { Router } from "express";
 import cors from "cors";
-import routes from "./routes.js";
+import routes from "./routes.js"
+
 
 class App {
-    constructor() {
+    constructor(){
         this.server = express();
         this.middlewares();
-        this.routes();
+        this.routes(); 
     }
 
-    middlewares() {
+    middlewares(){
         this.server.use(express.json());
         this.server.use(cors());
     }
 
-    routes() {        
-        
-        this.server.use(routes);
-        
+    routes() {
+        this.server.use(routes)
     }
-
 }
-
 
 export default new App().server;

@@ -1,9 +1,10 @@
-import { Router} from "express";
 
-import HelloController from "./controllers/HelloController.js";
+import { Router } from "express"
+import HelloController from "./controllers/helloController.js";
+
 
 const routes = new Router();
 
-routes.get("/hi", HelloController.index);
+routes.get("/hello", HelloController.index);
 
-export default new routes;
+export default routes;
